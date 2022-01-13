@@ -1,0 +1,194 @@
+body {
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url("https://idlescape.com/images/ui/stone_ui_tile_dark_gray.png");
+  overflow: auto;
+  scrollbar-color: #767677 #1e1e1f;
+  scrollbar-width: thin;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.select-container {
+    background-color: #a9a9a9;
+    color: #fff;
+    width: 75vw;
+    text-align: center;
+    height: 100%;
+    padding: 30px;
+    margin: 20px;
+    background-color: rgba(56,56,56,0);
+    border-image-source: url(https://idlescape.com/images/ui/stone-9slice.png)!important;
+    border-image-slice: 100 fill!important;
+    border-image-width: 100px!important;
+    border-image-outset: 0!important;
+    padding: 50px!important;
+    border-image-repeat: repeat!important;
+    transition: .3s;
+}
+
+.select-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 20px 5px hsla(0,0%,100%,.7),inset 0 0 20px 0 hsla(0,0%,100%,.7);
+    border-radius: 10px;
+  }
+
+.resetButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white;
+  font-size: 24px;
+}
+
+.filter {
+  background-image: url('https://idlescape.com/images/16px/search.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-color: transparent;
+  color: white;
+  width: 95%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #5c5c5c;
+  border-radius: 5px;
+}
+
+.marketContainer {
+  overflow-y: scroll;
+}
+
+.clickMarket {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 60px);
+  grid-template-rows: repeat(auto-fill, 60px);
+  grid-gap: 0.5rem;
+  justify-content: center;
+  height:calc(100vh - 545px);
+}
+
+.clickMarketItem {
+  width: 60px;
+  height: 60px;
+  float: left;
+  cursor: pointer;
+  position: relative;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 8px!important;
+  /*text-shadow: 2px 2px 0px  #000, -2px -2px 0px  #000, 2px -2px 0px  #000, -2px 2px 0px  #000;*/
+  background-size: 100% 100%;
+  background-image: linear-gradient(180deg,rgba(34,211,255,.37),rgba(34,211,255,.37))
+    ,url(https://idlescape.com/images/ui/frame_icon.png);
+}
+
+.clickMarketItem img{
+  height: 100%;
+  width: 85%;
+  object-fit: contain;
+  margin-left: 3px;
+  margin-right: 5px;
+  filter: drop-shadow(3px 3px 2px rgba(0,0,0,0.9));
+  vertical-align: middle;
+}
+
+.clickMarketItemName {
+  position: relative;
+  text-align: center;
+  margin-top: -20px;
+  font-size: 14px;
+  font-weight: bolder;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.gold {
+    background-color: rgba(100,80,61,.5607843137254902);
+    border-radius: 10px;
+    border: 2px solid rgba(255,218,124,.2823529411764706)
+}
+
+.heat {
+    background-color: rgba(160,44,44,.5607843137254902);
+    border-radius: 10px;
+    border: 2px solid rgba(255,0,0,.2823529411764706)
+}
+
+.ore {
+    background-image: linear-gradient(180deg,rgba(56,19,1,.7),rgba(56,19,1,.7)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.bar {
+    background-image: linear-gradient(180deg,rgba(39,39,39,.7),rgba(39,39,39,.7)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.log {
+    background-image: linear-gradient(180deg,rgba(6,53,8,.7),rgba(6,53,8,.7)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.seed {
+    background-image: linear-gradient(180deg,rgba(13,95,17,.6),rgba(13,95,17,.6)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.equipment {
+    background-image: linear-gradient(180deg,rgba(87,104,253,.199),rgba(87,104,253,.199)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.gem {
+    background-image: linear-gradient(180deg,rgba(34,211,255,.37),rgba(34,211,255,.37)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.rune {
+    background-image: radial-gradient(circle,rgba(110,180,255,.486) 0,rgba(61,61,61,.37) 100%),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.fish {
+    background-image: linear-gradient(180deg,rgba(64,224,208,.37),rgba(64,224,208,.37)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.cooking-ingredient {
+    background-image: linear-gradient(180deg,rgba(65,147,255,.37),rgba(65,147,255,.37)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.cookedFish {
+    background-image: linear-gradient(180deg,rgba(210,154,69,.1450980392156863),rgba(210,154,69,.1450980392156863)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.enchanted-scroll {
+    background-image: linear-gradient(180deg,rgba(56,19,1,.7),rgba(56,19,1,.7)),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.gold-medal {
+    background-image: radial-gradient(circle,rgba(217,255,0,.719) 0,rgba(251,255,0,.192) 100%),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+
+.silver-medal {
+    background-image: radial-gradient(circle,hsla(0,0%,100%,.719) 0,rgba(44,44,44,.192) 100%),url(https://idlescape.com/images/ui/frame_icon.png)
+}
+::-webkit-scrollbar {
+    width: 10px
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.1)
+}
+
+::-webkit-scrollbar-thumb {
+    background: #474747;
+    border-radius: 10px;
+    border: 1px solid #292929
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555
+}
