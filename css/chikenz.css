@@ -1,46 +1,80 @@
 body {
+  background-color: #111316;
   background-image: linear-gradient(180deg, rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-    url("https://idlescape.com/images/ui/stone_ui_tile_dark_gray.png");
-  overflow: auto;
+    url("assets/stone_ui_tile_dark_gray.png");
+  overflow: hidden;
   scrollbar-color: #767677 #1e1e1f;
   scrollbar-width: thin;
-  width: 100vw;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 100%;
 }
 
+.tab-container {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+}
+
+.tab-select {
+  background-color: #a9a9a9;
+  color: #fff;
+  width: auto;
+  max-width: 100px;
+  text-align: center;
+  margin: 5px;
+  background-color: rgba(56,56,56,0);
+  border-image-source: url(assets/stone-9slice.png)!important;
+  border-image-slice: 100 fill;
+  border-image-width: 100px!important;
+  border-image-outset: 0!important;
+  padding: 20px!important;
+  border-image-repeat: repeat!important;
+  transition: .01s;
+  cursor: pointer;
+}
+
+.tab-select:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 5px 2px hsla(0,0%,100%,.7),inset 0 0 5px 0 hsla(0,0%,100%,.7);
+  border-radius: 10px;
+}
+
 .select-container {
-    background-color: #a9a9a9;
-    color: #fff;
-    width: 75vw;
-    text-align: center;
-    height: 100%;
-    padding: 30px;
-    margin: 20px;
-    background-color: rgba(56,56,56,0);
-    border-image-source: url(https://idlescape.com/images/ui/stone-9slice.png)!important;
-    border-image-slice: 100 fill!important;
-    border-image-width: 100px!important;
-    border-image-outset: 0!important;
-    padding: 50px!important;
-    border-image-repeat: repeat!important;
-    transition: .3s;
+  background-color: #a9a9a9;
+  color: #fff;
+  width: auto;
+  max-width: 250px;
+  text-align: center;
+  height: auto;
+  padding: 30px;
+  margin: 20px;
+  background-color: rgba(56,56,56,0);
+  border-image-source: url(assets/stone-9slice.png)!important;
+  border-image-slice: 100 fill!important;
+  border-image-width: 100px!important;
+  border-image-outset: 0!important;
+  padding: 50px!important;
+  border-image-repeat: repeat!important;
+  transition: .01s;
+  display: flex;
 }
 
 .select-container:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 20px 5px hsla(0,0%,100%,.7),inset 0 0 20px 0 hsla(0,0%,100%,.7);
-    border-radius: 10px;
-  }
+  transform: scale(1.03);
+  box-shadow: 0 0 20px 5px hsla(0,0%,100%,.7),inset 0 0 20px 0 hsla(0,0%,100%,.7);
+  border-radius: 10px;
+}
+
+.select-container p{
+}
 
 .resetButton {
   position: absolute;
-  top: 20px;
+  top: 150px;
   left: 20px;
   border-radius: 5px;
   background-color: transparent;
