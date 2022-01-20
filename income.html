@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Holychikenz</title>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/chikenz.js"></script>
+<script src="js/mining.js"></script>
+<script src="js/income.js"></script>
+<link rel="stylesheet" href="css/chikenz.css">
+<script>
+window.onload = function() {
+  async function startup() {
+    // market data
+    let dataURL = await fetch("https://raw.githubusercontent.com/holychikenz/MarketBackup/main/views/dailyAverage.json")
+    let data = await dataURL.json();
+    // display
+    let viewer = new income(data);
+  }
+  startup()
+}
+</script>
+</head>
+
+<body>
+  <nav class="tab-container">
+    <div class="tab-select" onclick="location.href='market.html';">Economy</div>
+    <div class="tab-select" onclick="location.href='income.html';">Income</div>
+    <div class="tab-select" onclick="location.href='drops.html';">Drop-tables</div>
+    <div class="tab-select" onclick="location.href='cooking.html';">Cooking</div>
+    <div class="tab-select" onclick="location.href='combat.html';">Combat</div>
+  </nav>
+  <h1 style="color:white;text-align:center;">Coming Soon&trade;</h1>
+  <p style="color:white;">
+    This can be made up of a plot on top that shows each selected skill/zone.
+    The plot can be selected to show either gold per hour, cooking per hour,
+    or crafting per hour.
+    Below the plot will be a button to "Add" a zone which will create rows of
+    zones, each zone can be (Disabled, deleted, modified, and duplicated). The
+    zone will have general settings (line color and style), and specific settings
+    (like gear and enchants). Multiple like-zones (all fishing) can be modified
+    together for edits to gear/enchants.
+  </p>
+  <div id="miningTest"></div>
+  <div class="container">
+    <div id="plot" style="display:flex;"></div>
+    <div id="incomeAddition" class="incomeAddition">New income source ...</div>
+    <div id="incomeList" class="incomeList">
+      <!-- Income sources appended here -->
+    </div>
+  </div>
+</body>
+</html>

@@ -4,6 +4,7 @@
 <link rel="stylesheet" href="css/chikenz.css">
 <title>Market View</title>
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="js/chikenz.js"></script>
 <script src="js/marketview.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -24,11 +25,11 @@ window.onload = function() {
 <body>
   <!-- Nav bar, shared per page -->
   <nav class="tab-container">
-    <div class="tab-select" onclick="location.href='market.html';">Economy</div>
-    <div class="tab-select" onclick="location.href='construction.html';">Income</div>
-    <div class="tab-select" onclick="location.href='construction.html';">Drop-tables</div>
-    <div class="tab-select" onclick="location.href='construction.html';">Cooking</div>
-    <div class="tab-select" onclick="location.href='construction.html';">Combat</div>
+    <div style="font-weight:bolder;" class="tab-select" onclick="location.href='market.html';">Economy</div>
+    <div class="tab-select" onclick="location.href='income.html';">Income</div>
+    <div class="tab-select" onclick="location.href='drops.html';">Drop-tables</div>
+    <div class="tab-select" onclick="location.href='cooking.html';">Cooking</div>
+    <div class="tab-select" onclick="location.href='combat.html';">Combat</div>
   </nav>
   <!-- Body of market -->
   <div class="container">
